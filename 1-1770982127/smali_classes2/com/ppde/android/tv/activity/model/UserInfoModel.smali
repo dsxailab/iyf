@@ -3701,7 +3701,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/ppde/android/tv/activity/model/UserInfoModel;->isGiveVip:Ljava/lang/Boolean;
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 2
     .line 3
