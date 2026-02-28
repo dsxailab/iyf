@@ -1,0 +1,44 @@
+[
+  {
+    "id": 200,
+    "title": "0.5 倍",
+    "isVip": false,
+    "des": "",
+    "targetValue": 0.5
+  },
+  {
+    "id": 201,
+    "title": "0.75 倍",
+    "isVip": false,
+    "des": "",
+    "targetValue": 0.75
+  },
+  {
+    "id": 202,
+    "title": "1.0 倍",
+    "isVip": false,
+    "des": "",
+    "targetValue": 1.0
+  },
+  {
+    "id": 203,
+    "title": "1.25 倍",
+    "isVip": false,
+    "des": "",
+    "targetValue": 1.25
+  },
+  {
+    "id": 204,
+    "title": "1.5 倍",
+    "isVip": false,
+    "des": "",
+    "targetValue": 1.5
+  },
+  {
+    "id": 205,
+    "title": "2.0 倍",
+    "isVip": false,
+    "des": "",
+    "targetValue": 2.0
+  }
+]

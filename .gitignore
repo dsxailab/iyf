@@ -1,5 +1,5 @@
-.zip
-.gz
+*.zip
+*.gz
 1-1770982127
-.apk
-.idsig
+*.apk
+*.idsig

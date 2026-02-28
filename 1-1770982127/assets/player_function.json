@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1000,
+    "title": "选集",
+    "isVip": false,
+    "des": ""
+  },
+  {
+    "id": 1001,
+    "title": "清晰度",
+    "isVip": false,
+    "des": ""
+  },
+  {
+    "id": 1002,
+    "title": "倍速",
+    "isVip": false,
+    "des": ""
+  },
+  {
+    "id": 1003,
+    "title": "语言",
+    "isVip": false,
+    "des": ""
+  },
+  {
+    "id": 1004,
+    "title": "弹幕",
+    "isVip": false,
+    "des": ""
+  }
+]

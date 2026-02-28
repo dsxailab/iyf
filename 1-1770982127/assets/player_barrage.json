@@ -1,0 +1,26 @@
+[
+  {
+    "id": 300,
+    "title": "小字体",
+    "isVip": false,
+    "des": "1.0"
+  },
+  {
+    "id": 301,
+    "title": "大字体",
+    "isVip": false,
+    "des": "1.5"
+  },
+  {
+    "id": 302,
+    "title": "超大字体",
+    "isVip": false,
+    "des": "2.0"
+  },
+  {
+    "id": 350,
+    "title": "关闭",
+    "isVip": false,
+    "des": "-1"
+  }
+]
