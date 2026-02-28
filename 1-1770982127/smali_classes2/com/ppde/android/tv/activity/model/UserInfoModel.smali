@@ -2965,12 +2965,15 @@
 .end method
 
 .method public final getVipLevel()Ljava/lang/Integer;
-    .locals 1
-
+    .locals 2
     .line 1
-    iget-object v0, p0, Lcom/ppde/android/tv/activity/model/UserInfoModel;->vipLevel:Ljava/lang/Integer;
+    const/16 v0, 0x63
 
     .line 2
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
     .line 3
     return-object v0
 .end method
