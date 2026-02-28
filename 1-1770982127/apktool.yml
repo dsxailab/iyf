@@ -1,0 +1,21 @@
+version: 3.0.1
+apkFileName: 1-1770982127.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 17
+  targetSdkVersion: 33
+versionInfo:
+  versionCode: 1
+  versionName: 20262.28.1
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- gif
+- ogg
+- png
+- webp
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
