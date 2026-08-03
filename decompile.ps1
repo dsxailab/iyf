@@ -1,2 +1,2 @@
-apktool d ./1-1770982127.apk
+apktool d ./1-1770982127.apk -f
 

@@ -374,17 +374,17 @@
     .line 6
     iput v3, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->showTimeoutMs:I
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
     .line 7
-    iput v9, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->repeatToggleModes:I
+    iput v8, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->repeatToggleModes:I
 
     const/16 v3, 0xc8
 
     .line 8
     iput v3, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->timeBarMinUpdateIntervalMs:I
 
-    const/4 v10, 0x1
+    const/4 v9, 0x1
 
     if-eqz v6, :cond_0
 
@@ -398,7 +398,7 @@
     move/from16 v5, p3
 
     .line 10
-    invoke-virtual {v3, v6, v4, v5, v9}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-virtual {v3, v6, v4, v5, v8}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v3
 
@@ -435,7 +435,7 @@
     sget v4, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_rewind_button:I
 
     .line 16
-    invoke-virtual {v3, v4, v10}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v3, v4, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v4
 
@@ -443,7 +443,7 @@
     sget v5, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_fastforward_button:I
 
     .line 18
-    invoke-virtual {v3, v5, v10}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v3, v5, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v5
 
@@ -451,62 +451,62 @@
     sget v7, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_previous_button:I
 
     .line 20
-    invoke-virtual {v3, v7, v10}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v3, v7, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v7
 
     .line 21
-    sget v11, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_next_button:I
+    sget v10, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_next_button:I
 
     .line 22
-    invoke-virtual {v3, v11, v10}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v3, v10, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v10
+
+    .line 23
+    sget v11, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_shuffle_button:I
+
+    .line 24
+    invoke-virtual {v3, v11, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v11
 
-    .line 23
-    sget v12, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_shuffle_button:I
+    .line 25
+    sget v12, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_subtitle_button:I
 
-    .line 24
-    invoke-virtual {v3, v12, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    .line 26
+    invoke-virtual {v3, v12, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v12
 
-    .line 25
-    sget v13, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_subtitle_button:I
+    .line 27
+    sget v13, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_vr_button:I
 
-    .line 26
-    invoke-virtual {v3, v13, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    .line 28
+    invoke-virtual {v3, v13, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v13
 
-    .line 27
-    sget v14, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_show_vr_button:I
+    .line 29
+    sget v14, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_time_bar_min_update_interval:I
 
-    .line 28
-    invoke-virtual {v3, v14, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    iget v15, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->timeBarMinUpdateIntervalMs:I
+
+    .line 30
+    invoke-virtual {v3, v14, v15}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v14
 
-    .line 29
-    sget v15, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_time_bar_min_update_interval:I
-
-    iget v8, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->timeBarMinUpdateIntervalMs:I
-
-    .line 30
-    invoke-virtual {v3, v15, v8}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v8
-
     .line 31
-    invoke-virtual {v1, v8}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setTimeBarMinUpdateInterval(I)V
+    invoke-virtual {v1, v14}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setTimeBarMinUpdateInterval(I)V
 
     .line 32
-    sget v8, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_animation_enabled:I
+    sget v14, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerControlView_animation_enabled:I
 
     .line 33
-    invoke-virtual {v3, v8, v10}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v3, v14, v9}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    move-result v8
+    move-result v14
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -519,9 +519,9 @@
 
     move v7, v13
 
-    move v13, v8
+    move v13, v10
 
-    move v8, v4
+    move v10, v4
 
     move/from16 v22, v11
 
@@ -542,11 +542,11 @@
     throw v0
 
     :cond_0
-    const/4 v5, 0x0
+    const/4 v5, 0x1
 
     const/4 v7, 0x0
 
-    const/4 v8, 0x1
+    const/4 v10, 0x1
 
     const/4 v11, 0x1
 
@@ -554,7 +554,7 @@
 
     const/4 v13, 0x1
 
-    const/4 v14, 0x1
+    const/4 v14, 0x0
 
     const/4 v15, 0x0
 
@@ -613,36 +613,36 @@
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-direct {v3, v2, v10}, Ljava/util/Formatter;-><init>(Ljava/lang/Appendable;Ljava/util/Locale;)V
+    invoke-direct {v3, v2, v9}, Ljava/util/Formatter;-><init>(Ljava/lang/Appendable;Ljava/util/Locale;)V
 
     iput-object v3, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->formatter:Ljava/util/Formatter;
 
     .line 44
-    new-array v2, v9, [J
+    new-array v2, v8, [J
 
     iput-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->adGroupTimesMs:[J
 
     .line 45
-    new-array v2, v9, [Z
+    new-array v2, v8, [Z
 
     iput-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->playedAdGroups:[Z
 
     .line 46
-    new-array v2, v9, [J
+    new-array v2, v8, [J
 
     iput-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->extraAdGroupTimesMs:[J
 
     .line 47
-    new-array v2, v9, [Z
+    new-array v2, v8, [Z
 
     iput-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->extraPlayedAdGroups:[Z
 
     .line 48
-    new-instance v2, Lcom/google/android/exoplayer2/ui/d0;
+    new-instance v2, Lcom/google/android/exoplayer2/ui/y;
 
-    invoke-direct {v2, v1}, Lcom/google/android/exoplayer2/ui/d0;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;)V
+    invoke-direct {v2, v1}, Lcom/google/android/exoplayer2/ui/y;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;)V
 
     iput-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->updateProgressAction:Ljava/lang/Runnable;
 
@@ -697,9 +697,9 @@
     iput-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->fullScreenButton:Landroid/widget/ImageView;
 
     .line 54
-    new-instance v3, Lcom/google/android/exoplayer2/ui/e0;
+    new-instance v3, Lcom/google/android/exoplayer2/ui/z;
 
-    invoke-direct {v3, v1}, Lcom/google/android/exoplayer2/ui/e0;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;)V
+    invoke-direct {v3, v1}, Lcom/google/android/exoplayer2/ui/z;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;)V
 
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->initializeFullScreenButton(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -715,9 +715,9 @@
     iput-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->minimalFullScreenButton:Landroid/widget/ImageView;
 
     .line 56
-    new-instance v3, Lcom/google/android/exoplayer2/ui/e0;
+    new-instance v3, Lcom/google/android/exoplayer2/ui/z;
 
-    invoke-direct {v3, v1}, Lcom/google/android/exoplayer2/ui/e0;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;)V
+    invoke-direct {v3, v1}, Lcom/google/android/exoplayer2/ui/z;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;)V
 
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->initializeFullScreenButton(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -767,9 +767,9 @@
 
     .line 63
     :cond_4
-    sget v10, Lcom/google/android/exoplayer2/ui/R$id;->exo_progress:I
+    sget v9, Lcom/google/android/exoplayer2/ui/R$id;->exo_progress:I
 
-    invoke-virtual {v1, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -793,7 +793,7 @@
 
     move/from16 v21, v7
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
     goto :goto_1
 
@@ -813,7 +813,7 @@
 
     move-object/from16 p2, v3
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
     move-object/from16 v3, p1
 
@@ -834,7 +834,7 @@
     invoke-direct/range {v2 .. v7}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/util/AttributeSet;I)V
 
     .line 67
-    invoke-virtual {v2, v10}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v2, v9}, Landroid/view/View;->setId(I)V
 
     .line 68
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -875,10 +875,10 @@
 
     move/from16 v21, v7
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
     .line 74
-    iput-object v9, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->timeBar:Lcom/google/android/exoplayer2/ui/TimeBar;
+    iput-object v8, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->timeBar:Lcom/google/android/exoplayer2/ui/TimeBar;
 
     .line 75
     :goto_1
@@ -965,7 +965,7 @@
     goto :goto_2
 
     :cond_b
-    move-object v5, v9
+    move-object v5, v8
 
     :goto_2
     iput-object v5, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->rewindButtonTextView:Landroid/widget/TextView;
@@ -1011,7 +1011,7 @@
     goto :goto_3
 
     :cond_f
-    move-object v5, v9
+    move-object v5, v8
 
     :goto_3
     iput-object v5, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->fastForwardButtonTextView:Landroid/widget/TextView;
@@ -1131,8 +1131,10 @@
 
     iput-object v4, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->controlViewLayoutManager:Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;
 
+    move/from16 v9, v20
+
     .line 106
-    invoke-virtual {v4, v13}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setAnimationEnabled(Z)V
+    invoke-virtual {v4, v9}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setAnimationEnabled(Z)V
 
     .line 107
     sget v4, Lcom/google/android/exoplayer2/ui/R$string;->exo_controls_playback_speed:I
@@ -1158,17 +1160,9 @@
 
     move-result-object v6
 
-    const/4 v7, 0x2
+    filled-new-array {v4, v6}, [Ljava/lang/String;
 
-    new-array v10, v7, [Ljava/lang/String;
-
-    const/4 v13, 0x0
-
-    aput-object v4, v10, v13
-
-    const/4 v4, 0x1
-
-    aput-object v6, v10, v4
+    move-result-object v4
 
     .line 113
     sget v6, Lcom/google/android/exoplayer2/ui/R$drawable;->exo_styled_controls_audiotrack:I
@@ -1178,84 +1172,90 @@
 
     move-result-object v6
 
+    const/4 v7, 0x2
+
     new-array v7, v7, [Landroid/graphics/drawable/Drawable;
 
-    aput-object v5, v7, v13
+    const/4 v9, 0x0
 
-    aput-object v6, v7, v4
+    aput-object v5, v7, v9
+
+    const/4 v5, 0x1
+
+    aput-object v6, v7, v5
 
     .line 115
-    new-instance v4, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;
+    new-instance v5, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;
 
-    invoke-direct {v4, v1, v10, v7}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;[Ljava/lang/String;[Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v5, v1, v4, v7}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;[Ljava/lang/String;[Landroid/graphics/drawable/Drawable;)V
 
-    iput-object v4, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->settingsAdapter:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;
+    iput-object v5, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->settingsAdapter:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;
 
     .line 116
-    sget v5, Lcom/google/android/exoplayer2/ui/R$dimen;->exo_settings_offset:I
+    sget v4, Lcom/google/android/exoplayer2/ui/R$dimen;->exo_settings_offset:I
 
-    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v5
+    move-result v4
 
-    iput v5, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->settingsWindowMargin:I
+    iput v4, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->settingsWindowMargin:I
 
     .line 117
     invoke-static/range {p1 .. p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    move-result-object v5
+    move-result-object v4
 
     sget v6, Lcom/google/android/exoplayer2/ui/R$layout;->exo_styled_settings_list:I
 
     .line 118
-    invoke-virtual {v5, v6, v9}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {v4, v6, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    move-result-object v5
+    move-result-object v4
 
-    check-cast v5, Landroidx/recyclerview/widget/RecyclerView;
+    check-cast v4, Landroidx/recyclerview/widget/RecyclerView;
 
-    iput-object v5, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->settingsView:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object v4, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->settingsView:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 119
-    invoke-virtual {v5, v4}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v4, v5}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 120
-    new-instance v4, Landroidx/recyclerview/widget/LinearLayoutManager;
+    new-instance v5, Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-direct {v4, v6}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
+    invoke-direct {v5, v6}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v5, v4}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
+    invoke-virtual {v4, v5}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 121
-    new-instance v4, Landroid/widget/PopupWindow;
+    new-instance v5, Landroid/widget/PopupWindow;
 
     const/4 v6, -0x2
 
     const/4 v7, 0x1
 
-    invoke-direct {v4, v5, v6, v6, v7}, Landroid/widget/PopupWindow;-><init>(Landroid/view/View;IIZ)V
+    invoke-direct {v5, v4, v6, v6, v7}, Landroid/widget/PopupWindow;-><init>(Landroid/view/View;IIZ)V
 
-    iput-object v4, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->settingsWindow:Landroid/widget/PopupWindow;
+    iput-object v5, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->settingsWindow:Landroid/widget/PopupWindow;
 
     .line 122
-    sget v5, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
+    sget v4, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v6, 0x17
 
-    if-ge v5, v6, :cond_16
+    if-ge v4, v6, :cond_16
 
     .line 123
-    new-instance v5, Landroid/graphics/drawable/ColorDrawable;
+    new-instance v4, Landroid/graphics/drawable/ColorDrawable;
 
     const/4 v6, 0x0
 
-    invoke-direct {v5, v6}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    invoke-direct {v4, v6}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {v4, v5}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v5, v4}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_4
 
@@ -1264,7 +1264,7 @@
 
     .line 124
     :goto_4
-    invoke-virtual {v4, v3}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
+    invoke-virtual {v5, v3}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
 
     .line 125
     iput-boolean v7, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->needToHideBars:Z
@@ -1323,14 +1323,14 @@
     .line 135
     new-instance v3, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$TextTrackSelectionAdapter;
 
-    invoke-direct {v3, v1, v9}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$TextTrackSelectionAdapter;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$1;)V
+    invoke-direct {v3, v1, v8}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$TextTrackSelectionAdapter;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$1;)V
 
     iput-object v3, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->textTrackSelectionAdapter:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$TextTrackSelectionAdapter;
 
     .line 136
     new-instance v3, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$AudioTrackSelectionAdapter;
 
-    invoke-direct {v3, v1, v9}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$AudioTrackSelectionAdapter;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$1;)V
+    invoke-direct {v3, v1, v8}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$AudioTrackSelectionAdapter;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$1;)V
 
     iput-object v3, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->audioTrackSelectionAdapter:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$AudioTrackSelectionAdapter;
 
@@ -1521,7 +1521,7 @@
 
     iget-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->rewindButton:Landroid/view/View;
 
-    invoke-virtual {v0, v2, v8}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
+    invoke-virtual {v0, v2, v10}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
 
     .line 170
     iget-object v0, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->controlViewLayoutManager:Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;
@@ -1535,32 +1535,30 @@
 
     iget-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->nextButton:Landroid/view/View;
 
-    invoke-virtual {v0, v2, v14}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
+    invoke-virtual {v0, v2, v13}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
 
     .line 172
     iget-object v0, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->controlViewLayoutManager:Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;
 
     iget-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->shuffleButton:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2, v15}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
+    invoke-virtual {v0, v2, v14}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
 
     .line 173
     iget-object v0, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->controlViewLayoutManager:Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;
 
     iget-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->subtitleButton:Landroid/widget/ImageView;
 
-    move/from16 v13, v21
-
-    invoke-virtual {v0, v2, v13}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
+    invoke-virtual {v0, v2, v15}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
 
     .line 174
     iget-object v0, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->controlViewLayoutManager:Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;
 
     iget-object v2, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->vrButton:Landroid/view/View;
 
-    move/from16 v14, v20
+    move/from16 v13, v21
 
-    invoke-virtual {v0, v2, v14}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
+    invoke-virtual {v0, v2, v13}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
 
     .line 175
     iget-object v0, v1, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->controlViewLayoutManager:Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;
@@ -1571,20 +1569,20 @@
 
     if-eqz v4, :cond_17
 
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
     goto :goto_5
 
     :cond_17
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
     :goto_5
-    invoke-virtual {v0, v2, v9}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
+    invoke-virtual {v0, v2, v8}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlViewLayoutManager;->setShowButton(Landroid/view/View;Z)V
 
     .line 176
-    new-instance v0, Lcom/google/android/exoplayer2/ui/f0;
+    new-instance v0, Lcom/google/android/exoplayer2/ui/a0;
 
-    invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/ui/f0;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;)V
+    invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/ui/a0;-><init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;)V
 
     invoke-virtual {v1, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
