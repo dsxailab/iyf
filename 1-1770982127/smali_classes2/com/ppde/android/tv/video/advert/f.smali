@@ -1483,7 +1483,11 @@
 
 .method private final l()V
     .locals 3
-    
+
+    # Pause-screen advertising is disabled.  Returning before selecting an ad
+    # also prevents its display and impression callback from being triggered.
+    return-void
+
     .line 1
     iget-object v0, p0, Lcom/ppde/android/tv/video/advert/f;->pauseAdvertList:Ljava/util/List;
 
